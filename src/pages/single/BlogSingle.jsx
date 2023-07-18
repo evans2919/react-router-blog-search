@@ -1,4 +1,4 @@
-import { useParams, useSearchParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { useFetch } from "../../hooks/useFetch";
 const BlogSingle = () => {
     const params = useParams();
