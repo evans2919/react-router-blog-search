@@ -37,9 +37,12 @@ const Blog = () => {
                 {data
                     .filter((item) => {
                         const filter = searchParams.get("filter");
-                        if (!filter) return true;
                         const name = item.title.toLowerCase();
-                        return name.startsWith(filter.toLowerCase());
+                        if (!filter) {
+                            return true;
+                        } else {
+                            return name.startsWith(filter.toLowerCase());
+                        }
                     })
                     .map((item) => (
                         <Link
